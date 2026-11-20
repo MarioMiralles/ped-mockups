@@ -111,7 +111,8 @@
   .qs li::before{content:counter(q);font:700 40px/1 'Newsreader',serif;color:var(--red)}
   /* sidebar */
   aside{position:relative}
-  .side{display:flex;flex-direction:column;gap:22px}
+  .side{height:100%;display:flex;flex-direction:column;gap:22px}
+  .side .toc-box{position:sticky;top:24px;margin-top:8px}
   .box{border-top:3px solid var(--ink);padding-top:14px}
   .box h4{margin:0 0 12px;font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase}
   .toc{list-style:none;margin:0;padding:0;font:400 15px/1.35 'IBM Plex Sans',sans-serif}
@@ -302,6 +303,11 @@
 
     <aside>
       <div class="side">
+        <div class="fact"><span class="big">Sep 3, 2025</span>Date of death in the Dallas case. The Petition states the cause as hyaluronic acid pulmonary embolism.</div>
+        <div class="box"><h4>The court filing</h4>
+          <p class="sans" style="font-size:15px;line-height:1.5;margin:0 0 12px">Varkony v. Moore et al.<br><span class="mono" style="font-size:13px">Cause No. DC-26-20517</span></p>
+          <a class="btn" href="../assets/Varkony-v-Moore-First-Amended-Petition.pdf" target="_blank" rel="noopener">Read the petition ↗</a>
+        </div>
         <div class="box toc-box"><h4>In this report</h4>
           <ol class="toc">
             <li><a href="#video"><span class="n">00</span>Watch: Dr. Loria on safety</a></li>
@@ -312,11 +318,6 @@
             <li><a href="#questions"><span class="n">05</span>Questions to ask</a></li>
             <li><a href="#dr-loria"><span class="n">06</span>Dr. Loria on patient safety</a></li>
           </ol>
-        </div>
-        <div class="fact"><span class="big">Sep 3, 2025</span>Date of death in the Dallas case. The Petition states the cause as hyaluronic acid pulmonary embolism.</div>
-        <div class="box"><h4>The court filing</h4>
-          <p class="sans" style="font-size:15px;line-height:1.5;margin:0 0 12px">Varkony v. Moore et al.<br><span class="mono" style="font-size:13px">Cause No. DC-26-20517</span></p>
-          <a class="btn" href="../assets/Varkony-v-Moore-First-Amended-Petition.pdf" target="_blank" rel="noopener">Read the petition ↗</a>
         </div>
       </div>
     </aside>
