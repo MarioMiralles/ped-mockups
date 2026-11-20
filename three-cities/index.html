@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-  :root{--bg:#0c0d10;--bg2:#14161b;--bg3:#1c1f26;--line:#2b2f38;--text:#e9e7e2;--muted:#9a9ca3;--red:#e2483d;--red-dim:#5a1d19;--amber:#f0b45b}
+  :root{--bg:#0c0d10;--bg2:#14161b;--bg3:#1c1f26;--line:#2b2f38;--text:#e9e7e2;--muted:#dddbd6;--red:#e2483d;--red-dim:#5a1d19;--amber:#f0b45b}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.7 'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -37,7 +37,7 @@
   .hero .wrap{position:relative;z-index:2}
   .hero h1{font-size:clamp(54px,8.6vw,124px);margin:18px 0 22px;max-width:15ch}
   .hero h1 span{color:var(--red)}
-  .hero .sub{font:500 clamp(18px,2vw,22px)/1.45 'Inter',sans-serif;color:#cfcdc8;max-width:44ch;margin:0}
+  .hero .sub{font:500 clamp(18px,2vw,22px)/1.45 'Inter',sans-serif;color:#efede9;max-width:44ch;margin:0}
   .cities{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:44px;border:1px solid var(--line)}
   .city{display:block;background:rgba(20,22,27,.85);padding:18px 20px;text-decoration:none;color:var(--text);transition:background .2s}
   .city:hover{background:var(--bg3)}
@@ -51,7 +51,7 @@
   .intro{padding:clamp(72px,10vw,128px) 0;border-bottom:1px solid var(--line)}
   .intro-grid{display:grid;grid-template-columns:240px 1fr;gap:clamp(24px,5vw,64px)}
   .intro .big{font:500 clamp(24px,2.8vw,34px)/1.35 'Inter',sans-serif;letter-spacing:-.01em;color:#f4f2ed;margin:0 0 24px}
-  .intro p{color:#bdbbb5;font-size:18px;max-width:62ch}
+  .intro p{color:#ebe9e4;font-size:18px;max-width:62ch}
   /* video */
   .video-sec{padding:clamp(64px,8vw,104px) 0;background:var(--bg2);border-bottom:1px solid var(--line)}
   .letterbox{position:relative;aspect-ratio:21/9;background:#000;border:1px solid var(--line);display:grid;place-items:center;text-align:center;margin:26px 0 30px;overflow:hidden}
@@ -62,7 +62,7 @@
   .ph{position:absolute;top:calc(9% + 12px);left:14px;z-index:2;background:#ffd84a;color:#111;font:700 11px/1 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px}
   .video-sec h2{font-size:clamp(34px,5vw,64px);margin:14px 0 0}
   .addr{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);list-style:none;margin:0;padding:0}
-  .addr li{background:var(--bg2);padding:18px;font-size:15px;line-height:1.45;color:#cfcdc8}
+  .addr li{background:var(--bg2);padding:18px;font-size:15px;line-height:1.45;color:#efede9}
   .addr li span{display:block;font:500 12px/1 'JetBrains Mono',monospace;color:var(--red);margin-bottom:10px}
   /* chapter */
   .chapter{padding:clamp(72px,10vw,128px) 0;border-bottom:1px solid var(--line)}
@@ -76,9 +76,9 @@
   .stat small{display:block;color:var(--muted);font-size:13px;margin-top:8px;line-height:1.4}
   .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px)}
   .cols h3{font:400 30px/1 'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0 0 16px;color:#fff}
-  .cols p{color:#c9c7c1}
+  .cols p{color:#ebe9e4}
   .alleg{list-style:none;margin:0 0 30px;padding:0;border-top:1px solid var(--line)}
-  .alleg li{display:grid;grid-template-columns:44px 1fr;gap:6px;padding:16px 0;border-bottom:1px solid var(--line);color:#e2e0da}
+  .alleg li{display:grid;grid-template-columns:44px 1fr;gap:6px;padding:16px 0;border-bottom:1px solid var(--line);color:#f4f2ed}
   .alleg li span{font:500 13px/1.8 'JetBrains Mono',monospace;color:var(--red)}
   .autopsy{background:linear-gradient(135deg,var(--red-dim),#2a1210);border:1px solid #6d2621;padding:28px;margin-bottom:24px}
   .autopsy .label{color:#f2a49d}
@@ -95,7 +95,7 @@
   .tl-src{font-size:13px;color:var(--muted)}
   .matters{border-left:3px solid var(--amber);padding:6px 0 6px 22px;margin:48px 0 28px;font:500 clamp(20px,2.2vw,26px)/1.45 'Inter',sans-serif;color:#f4f2ed;max-width:56ch}
   .matters .label{display:block;margin-bottom:10px;color:var(--amber)}
-  .warn{border:1px solid var(--line);background:var(--bg2);padding:18px 20px;font-size:15px;color:#c9c7c1}
+  .warn{border:1px solid var(--line);background:var(--bg2);padding:18px 20px;font-size:15px;color:#ebe9e4}
   .warn b{color:#fff}
   .docbox{border:1px solid var(--line);background:var(--bg2);padding:22px;margin-bottom:24px}
   .docbox dl{margin:14px 0 18px;display:grid;grid-template-columns:110px 1fr;gap:10px 14px;font-size:15px}
@@ -116,13 +116,13 @@
   .twin .ch-num{font-size:clamp(90px,10vw,140px)}
   .twin h2{font-size:clamp(34px,4vw,54px);margin:16px 0 4px}
   .twin .when{display:inline-block;margin:10px 0 22px;padding:7px 11px;border:1px solid var(--red);color:#ffb2ab;font:600 12px/1 'Inter',sans-serif;letter-spacing:.04em}
-  .twin p{color:#c9c7c1}
+  .twin p{color:#ebe9e4}
   .twin .matters{font-size:18px;margin:30px 0 20px}
   .fine{font-size:14px;color:var(--muted);font-style:italic}
   /* risks */
   .risks{padding:clamp(72px,10vw,128px) 0;background:var(--bg2);border-bottom:1px solid var(--line)}
   .risks h2,.qs-sec h2{font-size:clamp(40px,6vw,80px);margin:14px 0 22px;max-width:16ch}
-  .risks .lead{color:#c9c7c1;max-width:64ch;font-size:18px}
+  .risks .lead{color:#ebe9e4;max-width:64ch;font-size:18px}
   .rlist{list-style:none;padding:0;margin:40px 0 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
   .rlist li{background:var(--bg);padding:26px 22px 30px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;font-size:18px;font-weight:500;color:#fff}
   .rlist li span{font:500 12px/1 'JetBrains Mono',monospace;color:var(--muted)}
@@ -139,7 +139,7 @@
   .doc-grid{display:grid;grid-template-columns:320px 1fr;gap:clamp(28px,5vw,72px);align-items:center}
   .portrait{aspect-ratio:4/5;border:1.5px dashed #4a4e58;display:grid;place-items:center;text-align:center;padding:16px;font:500 12px/1.6 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg2)}
   .doctor h2{font-size:clamp(40px,5vw,72px);margin:14px 0 22px}
-  .doctor p{color:#c9c7c1;font-size:18px;max-width:58ch}
+  .doctor p{color:#ebe9e4;font-size:18px;max-width:58ch}
   footer{padding:48px 0 56px;font-size:14px;color:var(--muted)}
   footer h4{margin:0 0 12px;color:var(--text);font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase}
   footer p{max-width:92ch}
@@ -176,8 +176,8 @@
             <path d="M231 159 Q 370 40 507 114" fill="none" stroke="#e2483d" stroke-opacity=".45" stroke-width="1.2" stroke-dasharray="4 6"/>
       <path d="M507 114 Q 650 70 779 212" fill="none" stroke="#e2483d" stroke-opacity=".45" stroke-width="1.2" stroke-dasharray="4 6"/>
       <g><circle cx="231" cy="159" r="60" fill="url(#glow)"/><circle class="pulse" cx="231" cy="159" r="6" fill="none" stroke="#e2483d" stroke-width="1.5"/><circle cx="231" cy="159" r="5" fill="#e2483d"/><text x="243" y="152" fill="#e9e7e2" font-family="JetBrains Mono,monospace" font-size="14" letter-spacing="1.5">DALLAS · 2025</text></g>
-      <g><circle cx="507" cy="114" r="3.5" fill="#e9e7e2"/><text x="517" y="108" fill="#9a9ca3" font-family="JetBrains Mono,monospace" font-size="13" letter-spacing="1.5">PARIS · 2019</text></g>
-      <g><circle cx="779" cy="212" r="3.5" fill="#e9e7e2"/><text x="771" y="236" text-anchor="end" fill="#9a9ca3" font-family="JetBrains Mono,monospace" font-size="13" letter-spacing="1.5">BANGKOK · 2026</text></g>
+      <g><circle cx="507" cy="114" r="3.5" fill="#e9e7e2"/><text x="517" y="108" fill="#dddbd6" font-family="JetBrains Mono,monospace" font-size="13" letter-spacing="1.5">PARIS · 2019</text></g>
+      <g><circle cx="779" cy="212" r="3.5" fill="#e9e7e2"/><text x="771" y="236" text-anchor="end" fill="#dddbd6" font-family="JetBrains Mono,monospace" font-size="13" letter-spacing="1.5">BANGKOK · 2026</text></g>
     </svg>
     <div class="wrap">
       <div class="label">Three reported deaths · Dr. Victor Loria discusses</div>
@@ -340,7 +340,7 @@
     <div class="wrap">
       <div class="label">Before treatment</div>
       <h2 class="display rv">Questions Every Patient Should Ask</h2>
-      <p style="color:#c9c7c1;font-size:18px">Before undergoing a penile enhancement procedure, patients should consider asking:</p>
+      <p style="color:#ebe9e4;font-size:18px">Before undergoing a penile enhancement procedure, patients should consider asking:</p>
       <ol class="qlist rv">
         <li>Who will personally perform my procedure, and what medical license and training do they hold?</li>
         <li>What exact product or substance will be injected?</li>
@@ -350,7 +350,7 @@
         <li>What emergency procedures and resources are available if a complication occurs?</li>
         <li>What follow-up care will be provided?</li>
       </ol>
-      <p style="color:#c9c7c1">Patients should be given the opportunity to discuss the benefits, limitations, alternatives, and risks of a proposed treatment before consenting.</p>
+      <p style="color:#ebe9e4">Patients should be given the opportunity to discuss the benefits, limitations, alternatives, and risks of a proposed treatment before consenting.</p>
     </div>
   </section>
 
