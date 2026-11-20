@@ -37,8 +37,20 @@
   .byline{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font:400 14px/1.4 'IBM Plex Sans',sans-serif;color:var(--muted)}
   .byline b{color:var(--ink);font-weight:600}
   /* article grid */
-  .grid{display:grid;grid-template-columns:minmax(0,1fr);max-width:860px;margin:0 auto;gap:clamp(28px,4vw,40px);padding:44px 0 20px}
-  article p{margin:0 0 1.05em}
+  main p{margin:0 0 1.05em}
+  .facts{display:grid;grid-template-columns:1fr 1.3fr 1fr;border-bottom:1px solid var(--rule)}
+  .facts .fact{padding:26px 28px 28px;border-left:1px solid var(--rule);font:400 15px/1.5 'IBM Plex Sans',sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+  .facts .fact:first-child{border-left:0;padding-left:0}
+  .facts .fact:last-child{padding-right:0}
+  .facts .label{font:500 12px/1.3 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+  .facts .big{font:700 40px/1.05 'Newsreader',serif;color:var(--ink)}
+  .facts .big.sm{font-size:28px;line-height:1.15}
+  .facts .mono{font-size:13px;margin-bottom:8px}
+  .row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,64px);align-items:start;margin-top:28px}
+  .row.even{grid-template-columns:1fr 1fr}
+  .facts + .row{margin-top:40px}
+  .row .col > :first-child{margin-top:0}
+  .intro p{max-width:70ch}
   .lede::first-letter{float:left;font:700 92px/.78 'Newsreader',serif;margin:8px 10px 0 0;color:var(--red)}
   h2{font:700 clamp(30px,3.6vw,44px)/1.08 'Newsreader',serif;letter-spacing:-.015em;margin:56px 0 16px}
   h3{font:600 15px/1.3 'IBM Plex Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:34px 0 12px;color:var(--ink)}
@@ -48,16 +60,16 @@
   ul.dots{margin:0 0 1.2em;padding-left:1.1em}
   ul.dots li{margin:.35em 0}
   /* video */
-  .video{position:relative;margin:30px 0 8px;aspect-ratio:16/9;background:#24221e;color:#efe9dc;display:grid;place-items:center;text-align:center;border:1px solid var(--ink)}
+  .video{position:relative;margin:0 0 8px;aspect-ratio:16/9;background:#24221e;color:#efe9dc;display:grid;place-items:center;text-align:center;border:1px solid var(--ink)}
   .video .play{width:84px;height:84px;border-radius:50%;border:2px solid #efe9dc;display:grid;place-items:center;margin:0 auto 14px}
   .video .play svg{margin-left:6px}
   .video small{display:block;font:500 12px/1.4 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
   .ph-tag{position:absolute;top:12px;left:12px;background:#f6d047;color:#1b1a17;font:600 11px/1 'IBM Plex Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px}
   .caption{font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:var(--muted);margin:0 0 18px}
   /* docket card */
-  .docket{border:1px solid var(--ink);background:#fbf8f1;margin:26px 0 30px}
+  .docket{border:1px solid var(--ink);background:#fbf8f1;margin:0 0 30px}
   .docket-head{display:flex;justify-content:space-between;gap:10px;background:var(--ink);color:var(--paper);padding:10px 16px;font:500 12px/1.3 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
-  .docket dl{margin:0;display:grid;grid-template-columns:150px 1fr}
+  .docket dl{margin:0;display:grid;grid-template-columns:120px 1fr}
   .docket dt,.docket dd{margin:0;padding:11px 16px;border-top:1px solid var(--rule);font-size:16px;line-height:1.45}
   .docket dt{font:500 12px/1.5 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:13px}
   .docket dl > :nth-child(1),.docket dl > :nth-child(2){border-top:0}
@@ -79,12 +91,14 @@
   .tl li.mark span{font-weight:700}
   .tl span{font-size:17px;line-height:1.5}
   .tl-src{font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:var(--muted);margin:4px 0 0 146px}
+  .intro p{font-size:20px}
   /* callouts */
   blockquote.pull{margin:34px 0;padding:6px 0 6px 26px;border-left:4px solid var(--red);font:500 clamp(24px,2.6vw,31px)/1.3 'Newsreader',serif;font-style:italic}
   blockquote.pull cite{display:block;margin-top:10px;font:500 13px/1.4 'IBM Plex Sans',sans-serif;font-style:normal;color:var(--muted);letter-spacing:.03em}
-  .notice{background:var(--red-soft);border-left:4px solid var(--red);padding:16px 20px;margin:24px 0;font:400 16px/1.55 'IBM Plex Sans',sans-serif}
+  .notice{background:var(--red-soft);border-left:4px solid var(--red);padding:16px 20px;margin:0;font:400 16px/1.55 'IBM Plex Sans',sans-serif}
   .notice strong{display:block;font-weight:600;margin-bottom:4px;letter-spacing:.02em}
   .sources{margin:20px 0 0;padding:16px 0 0;border-top:1px dashed var(--rule);font:400 15px/1.55 'IBM Plex Sans',sans-serif}
+  .row .sources{margin:0;padding-top:0;border-top:0}
   .sources b{display:block;font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
   .sources ul{margin:0;padding:0;list-style:none}
   .sources li{margin:0 0 10px;padding-left:18px;position:relative;word-break:break-word}
@@ -101,19 +115,18 @@
   .case .why b{display:block;font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
   .case .fine{font:italic 400 15px/1.5 'Newsreader',serif;color:var(--muted)}
   /* risks */
-  .risk-list{list-style:none;padding:0;margin:14px 0 18px;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+  .risk-list{list-style:none;padding:0;margin:14px 0 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
   .risk-list li{padding:12px 0 12px 30px;border-top:1px solid var(--rule);position:relative;font-size:17px}
   .risk-list li::before{content:"";position:absolute;left:0;top:20px;width:14px;height:2px;background:var(--red)}
   .risk-list li.grave{font-weight:700}
   /* questions */
-  .qs{list-style:none;counter-reset:q;margin:16px 0 20px;padding:0}
+  .qs{list-style:none;counter-reset:q;margin:16px 0 20px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
   .qs li{counter-increment:q;display:grid;grid-template-columns:62px 1fr;align-items:baseline;padding:16px 0;border-top:1px solid var(--rule);font-size:20px;line-height:1.4}
   .qs li::before{content:counter(q);font:700 40px/1 'Newsreader',serif;color:var(--red)}
-  /* sidebar */
-  aside{position:relative}
-  aside{order:-1}
-  .side{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
-  .side .toc-box{display:none}
+  .qs li.qs-note{counter-increment:none;display:block;font:italic 400 18px/1.5 'Newsreader',serif;color:var(--muted);padding-top:20px}
+  .qs li.qs-note::before{content:none}
+  blockquote.pull.wide{margin:48px 0 40px;font-size:clamp(28px,3.2vw,40px);line-height:1.25;max-width:none}
+  .doctor p{max-width:none}
   .box{border-top:3px solid var(--ink);padding-top:14px}
   .box h4{margin:0 0 12px;font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase}
   .toc{list-style:none;margin:0;padding:0;font:400 15px/1.35 'IBM Plex Sans',sans-serif}
@@ -121,8 +134,6 @@
   .toc a{display:flex;gap:10px;padding:9px 0;color:var(--ink);text-decoration:none}
   .toc a:hover{color:var(--red)}
   .toc .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);padding-top:2px;min-width:22px}
-  .fact{font:400 15px/1.5 'IBM Plex Sans',sans-serif;background:#fbf8f1;border:1px solid var(--rule);padding:16px}
-  .fact .big{display:block;font:700 34px/1.05 'Newsreader',serif;color:var(--red);margin-bottom:6px}
   /* doctor */
   .doctor{display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:start;background:var(--ink);color:var(--paper);padding:clamp(24px,4vw,40px);margin:60px 0 0}
   .portrait{aspect-ratio:4/5;border:1.5px dashed #8b8578;display:grid;place-items:center;text-align:center;font:500 12px/1.5 'IBM Plex Mono',monospace;color:#e4ddcf;padding:12px;letter-spacing:.05em;text-transform:uppercase}
@@ -137,7 +148,7 @@
   footer p{margin:0 0 10px;max-width:90ch}
   .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--rule);padding-top:16px;margin-top:20px}
   .foot-row a{color:var(--ink)}
-  @media (max-width:980px){.side{grid-template-columns:1fr}.side .fact{display:none}.nav{display:none}}
+  @media (max-width:980px){.nav{display:none}.row,.row.even{grid-template-columns:1fr;gap:28px}.facts{grid-template-columns:1fr}.facts .fact{border-left:0;border-top:1px solid var(--rule);padding:20px 0}.facts .fact:first-child{border-top:0}.risk-list{grid-template-columns:1fr 1fr}.qs{grid-template-columns:1fr}}
   @media (max-width:680px){
     .cases{grid-template-columns:1fr}.case{padding-right:0}.case + .case{border-left:0;border-top:1px solid var(--rule);padding-left:0}
     .risk-list{grid-template-columns:1fr}.doctor{grid-template-columns:1fr}.portrait{max-width:200px}
@@ -168,18 +179,44 @@
     <div class="byline"><span>With <b>Dr. Victor Loria, D.O.</b>, Loria Medical</span><span>Primary case: <b>Varkony v. Moore et al.</b>, Dallas County, Texas</span></div>
   </section>
 
-  <div class="grid">
-    <article>
+  <div class="facts">
+    <div class="fact"><span class="label">Dallas case · date of death</span><span class="big">Sep 3, 2025</span>The Petition states the cause as hyaluronic acid pulmonary embolism.</div>
+    <div class="fact"><span class="label">The court filing</span><span class="big sm"><i>Varkony v. Moore et al.</i></span><span class="mono">Cause No. DC-26-20517 · Dallas County, Texas</span><a class="btn" href="../assets/Varkony-v-Moore-First-Amended-Petition.pdf" target="_blank" rel="noopener">Read the petition ↗</a></div>
+    <div class="fact"><span class="label">Reported deaths discussed</span><span class="big">3</span>Dallas, Texas (2025) · Bangkok, Thailand (2026) · Paris, France (2019)</div>
+  </div>
+
+  <div class="row">
+    <div class="col">
       <p class="lede">Penile enhancement procedures have become increasingly popular, but patients considering these treatments should understand the potential risks, the qualifications of the individuals performing them, and the importance of appropriate medical supervision.</p>
       <p>Several reported deaths associated with penile enlargement procedures have raised serious questions about injectable fillers, patient safety, informed consent, and medical oversight.</p>
       <p>Dr. Victor Loria of Loria Medical discusses these cases, the potential medical complications involved, and what patients should know before undergoing penile enhancement.</p>
 
-      <div class="sec-label" id="video">Video</div>
-      <h2>Watch: Dr. Loria Discusses Penile Enhancement Safety</h2>
+    </div>
+    <div class="col">
+      <div class="box"><h4>In this report</h4>
+          <ol class="toc">
+            <li><a href="#video"><span class="n">00</span>Watch: Dr. Loria on safety</a></li>
+            <li><a href="#dallas"><span class="n">01</span>Dallas, Texas: PhalloFILL lawsuit</a></li>
+            <li><a href="#other-cases"><span class="n">02</span>Bangkok, Thailand</a></li>
+            <li><a href="#other-cases"><span class="n">03</span>Paris, France</a></li>
+            <li><a href="#risks"><span class="n">04</span>Potential risks</a></li>
+            <li><a href="#questions"><span class="n">05</span>Questions to ask</a></li>
+            <li><a href="#dr-loria"><span class="n">06</span>Dr. Loria on patient safety</a></li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-label" id="video">Video</div>
+  <h2>Watch: Dr. Loria Discusses Penile Enhancement Safety</h2>
+  <div class="row">
+    <div class="col">
       <div class="video" role="img" aria-label="Video placeholder: Dr. Victor Loria">
         <span class="ph-tag">Placeholder · hidden until the video is filmed</span>
         <div><div class="play"><svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true"><path d="M0 0l30 17L0 34z" fill="#efe9dc"/></svg></div><small>Dr. Victor Loria · video coming soon</small></div>
       </div>
+    </div>
+    <div class="col">
       <p class="caption">In this educational discussion, Dr. Loria addresses:</p>
       <ul class="dots">
         <li>Reported deaths following penile enhancement procedures.</li>
@@ -188,12 +225,33 @@
         <li>The importance of understanding injectable materials.</li>
         <li>Questions patients should ask before undergoing treatment.</li>
       </ul>
+    </div>
+  </div>
 
-      <div class="sec-label" id="dallas">Case 1 · Primary focus</div>
-      <h2>Dallas, Texas: The PhalloFILL Wrongful-Death Lawsuit</h2>
+  <div class="sec-label" id="dallas">Case 1 · Primary focus</div>
+  <h2>Dallas, Texas: The PhalloFILL Wrongful-Death Lawsuit</h2>
+  <div class="row">
+    <div class="col">
       <p><b>Patient death: September 3, 2025.</b> A wrongful-death lawsuit filed in Dallas County, Texas, raises serious concerns about the administration of hyaluronic acid dermal fillers for penile girth enhancement.</p>
       <p>According to the First Amended Original Petition filed September 28, 2026, Iris Varkony, the mother of the deceased patient identified as O.V., brought legal claims against William Moore, AdvancedYOU, The PhalloFILL Clinics, and several additional defendants.</p>
 
+      <h3>What does the lawsuit allege?</h3>
+      <p>The Petition alleges that:</p>
+      <ol class="clauses">
+        <li><span>William Moore founded and commercialized the PhalloFILL penile enhancement procedure.</span></li>
+        <li><span>Moore was identified as the injector in the patient's treatment records.</span></li>
+        <li><span>Moore lacked the medical licensing and qualifications necessary to perform, direct, or supervise the injections.</span></li>
+        <li><span>The patient did not receive appropriate medical evaluation, supervision, or disclosure of certain risks.</span></li>
+        <li><span>The patient underwent a further PhalloFILL injection session on September 3, 2025, and died later that day.</span></li>
+      </ol>
+
+      <h3>Reported autopsy findings</h3>
+      <p>The Petition states that an autopsy identified <b>hyaluronic acid pulmonary embolism</b> as the cause of death.</p>
+      <p>It further alleges that pathological findings were consistent with embolized filler material associated with multiple treatment sessions.</p>
+      <p><i>These statements are drawn from the plaintiff's court filing. The underlying autopsy report has not been independently evaluated for this article.</i></p>
+
+    </div>
+    <div class="col">
       <div class="docket">
         <div class="docket-head"><span>Court filing</span><span>Filed 09/28/2026</span></div>
         <dl>
@@ -206,17 +264,6 @@
         </dl>
         <div class="pdf"><span>Read the full petition (PDF, 46 pages)</span><a class="btn" href="../assets/Varkony-v-Moore-First-Amended-Petition.pdf" target="_blank" rel="noopener">Open PDF ↗</a></div>
       </div>
-
-      <h3>What does the lawsuit allege?</h3>
-      <p>The Petition alleges that:</p>
-      <ol class="clauses">
-        <li><span>William Moore founded and commercialized the PhalloFILL penile enhancement procedure.</span></li>
-        <li><span>Moore was identified as the injector in the patient's treatment records.</span></li>
-        <li><span>Moore lacked the medical licensing and qualifications necessary to perform, direct, or supervise the injections.</span></li>
-        <li><span>The patient did not receive appropriate medical evaluation, supervision, or disclosure of certain risks.</span></li>
-        <li><span>The patient underwent a further PhalloFILL injection session on September 3, 2025, and died later that day.</span></li>
-      </ol>
-
       <h3>The treatment timeline, as alleged</h3>
       <ol class="tl">
         <li><time>Jun 25, 2025</time><span>First injection session; treatment record on file.</span></li>
@@ -227,24 +274,25 @@
       </ol>
       <p class="tl-src">Dates from the Petition, ¶¶ 67–71 (treatment records dated June 25, July 22, August 12 and September 3, 2025).</p>
 
-      <h3>Reported autopsy findings</h3>
-      <p>The Petition states that an autopsy identified <b>hyaluronic acid pulmonary embolism</b> as the cause of death.</p>
-      <p>It further alleges that pathological findings were consistent with embolized filler material associated with multiple treatment sessions.</p>
-      <p><i>These statements are drawn from the plaintiff's court filing. The underlying autopsy report has not been independently evaluated for this article.</i></p>
-
-      <blockquote class="pull">This lawsuit raises important questions about who performs injectable penile enhancement procedures, how medical supervision is provided, what risks are disclosed, and how complications are recognized and addressed.<cite>Why this case matters</cite></blockquote>
-
+    </div>
+  </div>
+  <blockquote class="pull wide">This lawsuit raises important questions about who performs injectable penile enhancement procedures, how medical supervision is provided, what risks are disclosed, and how complications are recognized and addressed.<cite>Why this case matters</cite></blockquote>
+  <div class="row even">
+    <div class="col">
       <div class="notice"><strong>Important</strong>The allegations described above are assertions made by the plaintiff and should not be interpreted as judicial findings, established liability, or a determination that any defendant committed wrongdoing.</div>
-
+    </div>
+    <div class="col">
       <div class="sources"><b>Supporting sources</b>
         <ul>
           <li>News article: <a href="https://hoodline.com/2026/10/dallas-filler-death-what-the-autopsy-found-and-what-the-lawsuit-alleges/" target="_blank" rel="noopener">Hoodline, "Dallas filler death: what the autopsy found and what the lawsuit alleges"</a></li>
           <li>Court filing: <i>Varkony v. Moore et al.</i>, Cause No. DC-26-20517, 116th Judicial District Court, Dallas County, Texas. <a href="../assets/Varkony-v-Moore-First-Amended-Petition.pdf" target="_blank" rel="noopener">First Amended Petition (PDF)</a></li>
         </ul>
       </div>
+    </div>
+  </div>
 
-      <div class="sec-label" id="other-cases">Other reported deaths</div>
-      <h2>Bangkok and Paris</h2>
+  <div class="sec-label" id="other-cases">Other reported deaths</div>
+  <h2>Bangkok and Paris</h2>
       <div class="cases">
         <section class="case">
           <div class="where">Case 2 · Bangkok, Thailand</div>
@@ -274,9 +322,11 @@
         </section>
       </div>
 
-      <div class="sec-label" id="risks">Risks</div>
-      <h2>Understanding the Potential Risks of Penile Enhancement Injections</h2>
+  <div class="sec-label" id="risks">Risks</div>
+  <h2>Understanding the Potential Risks of Penile Enhancement Injections</h2>
+  <div class="intro">
       <p>Penile enhancement injections are medical procedures and may carry significant risks. Depending on the material, injection technique, patient characteristics, and other factors, potential complications may include:</p>
+  </div>
       <ul class="risk-list">
         <li>Infection and inflammatory reactions.</li>
         <li>Nodules, irregularities, or unwanted changes in appearance.</li>
@@ -287,9 +337,11 @@
       </ul>
       <p><i>Not every complication is caused by the same mechanism, and risks differ between products and techniques.</i></p>
 
-      <div class="sec-label" id="questions">Before treatment</div>
-      <h2>Questions Every Patient Should Ask Before Treatment</h2>
+  <div class="sec-label" id="questions">Before treatment</div>
+  <h2>Questions Every Patient Should Ask Before Treatment</h2>
+  <div class="intro">
       <p>Before undergoing a penile enhancement procedure, patients should consider asking:</p>
+  </div>
       <ol class="qs">
         <li>Who will personally perform my procedure, and what medical license and training do they hold?</li>
         <li>What exact product or substance will be injected?</li>
@@ -298,31 +350,9 @@
         <li>What medical evaluation will I receive beforehand?</li>
         <li>What emergency procedures and resources are available if a complication occurs?</li>
         <li>What follow-up care will be provided?</li>
+              <li class="qs-note">Patients should be given the opportunity to discuss the benefits, limitations, alternatives, and risks of a proposed treatment before consenting.</li>
       </ol>
-      <p>Patients should be given the opportunity to discuss the benefits, limitations, alternatives, and risks of a proposed treatment before consenting.</p>
-    </article>
 
-    <aside>
-      <div class="side">
-        <div class="fact"><span class="big">Sep 3, 2025</span>Date of death in the Dallas case. The Petition states the cause as hyaluronic acid pulmonary embolism.</div>
-        <div class="box"><h4>The court filing</h4>
-          <p class="sans" style="font-size:15px;line-height:1.5;margin:0 0 12px">Varkony v. Moore et al.<br><span class="mono" style="font-size:13px">Cause No. DC-26-20517</span></p>
-          <a class="btn" href="../assets/Varkony-v-Moore-First-Amended-Petition.pdf" target="_blank" rel="noopener">Read the petition ↗</a>
-        </div>
-        <div class="box toc-box"><h4>In this report</h4>
-          <ol class="toc">
-            <li><a href="#video"><span class="n">00</span>Watch: Dr. Loria on safety</a></li>
-            <li><a href="#dallas"><span class="n">01</span>Dallas, Texas: PhalloFILL lawsuit</a></li>
-            <li><a href="#other-cases"><span class="n">02</span>Bangkok, Thailand</a></li>
-            <li><a href="#other-cases"><span class="n">03</span>Paris, France</a></li>
-            <li><a href="#risks"><span class="n">04</span>Potential risks</a></li>
-            <li><a href="#questions"><span class="n">05</span>Questions to ask</a></li>
-            <li><a href="#dr-loria"><span class="n">06</span>Dr. Loria on patient safety</a></li>
-          </ol>
-        </div>
-      </div>
-    </aside>
-  </div>
 
   <section class="doctor" id="dr-loria">
     <div class="portrait">[Photo of Dr. Victor Loria]</div>

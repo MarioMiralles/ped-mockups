@@ -6,7 +6,7 @@ Static mockups for Maria and Dr. Loria to choose from, built 2026-11-20 around M
 | Path | Concept |
 | --- | --- |
 | `index.html` | Gallery of the three concepts |
-| `case-file/` | 1 · The Case File: investigative news report, Newsreader + IBM Plex, cream and deep red, docket card, petition timeline, single centered reading column with the date and court filing boxes side by side above it (no side column) |
+| `case-file/` | 1 · The Case File: investigative news report, Newsreader + IBM Plex, cream and deep red, docket card, petition timeline, full-width layout matching the header and footer: key-facts strip under the headline, then paired rows (intro + contents, video + topics, Dallas story + court card and timeline), two-column cases and questions, three-column risks |
 | `patient-guide/` | 2 · Patient Safety Guide: deep teal/mint/amber, Plus Jakarta Sans + Source Serif 4, video beside the headline, case tabs, risk icon cards, tickable/printable question checklist |
 | `three-cities/` | 3 · Three Cities: dark documentary style, Anton + Inter, map hero (Dallas, Paris, Bangkok), numbered chapters, letterbox video |
 | `assets/Varkony-v-Moore-First-Amended-Petition.pdf` | The petition Maria attached (the "[LINK TO PETITION PDF]" in the copy) |
