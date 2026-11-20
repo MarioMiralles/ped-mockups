@@ -37,7 +37,7 @@
   .byline{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font:400 14px/1.4 'IBM Plex Sans',sans-serif;color:var(--muted)}
   .byline b{color:var(--ink);font-weight:600}
   /* article grid */
-  .grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(28px,5vw,64px);padding:44px 0 20px}
+  .grid{display:grid;grid-template-columns:minmax(0,1fr);max-width:860px;margin:0 auto;gap:clamp(28px,4vw,40px);padding:44px 0 20px}
   article p{margin:0 0 1.05em}
   .lede::first-letter{float:left;font:700 92px/.78 'Newsreader',serif;margin:8px 10px 0 0;color:var(--red)}
   h2{font:700 clamp(30px,3.6vw,44px)/1.08 'Newsreader',serif;letter-spacing:-.015em;margin:56px 0 16px}
@@ -111,8 +111,9 @@
   .qs li::before{content:counter(q);font:700 40px/1 'Newsreader',serif;color:var(--red)}
   /* sidebar */
   aside{position:relative}
-  .side{height:100%;display:flex;flex-direction:column;gap:22px}
-  .side .toc-box{position:sticky;top:24px;margin-top:8px}
+  aside{order:-1}
+  .side{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+  .side .toc-box{display:none}
   .box{border-top:3px solid var(--ink);padding-top:14px}
   .box h4{margin:0 0 12px;font:600 12px/1 'IBM Plex Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase}
   .toc{list-style:none;margin:0;padding:0;font:400 15px/1.35 'IBM Plex Sans',sans-serif}
@@ -136,7 +137,7 @@
   footer p{margin:0 0 10px;max-width:90ch}
   .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--rule);padding-top:16px;margin-top:20px}
   .foot-row a{color:var(--ink)}
-  @media (max-width:980px){.grid{grid-template-columns:1fr}.side{position:static}aside{order:-1}.side .toc-box,.side .fact{display:none}.nav{display:none}}
+  @media (max-width:980px){.side{grid-template-columns:1fr}.side .fact{display:none}.nav{display:none}}
   @media (max-width:680px){
     .cases{grid-template-columns:1fr}.case{padding-right:0}.case + .case{border-left:0;border-top:1px solid var(--rule);padding-left:0}
     .risk-list{grid-template-columns:1fr}.doctor{grid-template-columns:1fr}.portrait{max-width:200px}
